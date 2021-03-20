@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, MenuItem, MenuList, Searchbox } from "./style/menu";
+import { Link } from "react-router-dom";
 
 interface Props {}
 
@@ -7,10 +8,18 @@ export const Menu = (props: Props) => {
   return (
     <Container>
       <MenuList>
-        <MenuItem>home</MenuItem>
-        <MenuItem>products</MenuItem>
-        <MenuItem>about</MenuItem>
-        <MenuItem>contact</MenuItem>
+        <MenuItem>
+          <Link to="/">home</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link to="/products">products</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link to="/about">about</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link to="/contact">contact</Link>
+        </MenuItem>
       </MenuList>
 
       <Searchbox type="input" placeholder="Search" />

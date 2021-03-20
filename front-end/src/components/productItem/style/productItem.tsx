@@ -2,10 +2,15 @@ import styled from "styled-components/macro";
 
 export const Container = styled.div`
   padding: 1rem;
-  border: 0.05rem gray solid;
-  box-shadow: 0.2rem 0.2rem 0.5rem #383838;
   margin: 0 1rem 1rem 0;
   max-width: 20rem;
+  transition: all 0.3s;
+
+  &:hover {
+    border: 0.05rem gray solid;
+    box-shadow: 0.2rem 0.2rem 0.5rem #383838;
+    transform: translateY(-0.2rem);
+  }
 `;
 export const ProductImage = styled.img`
   width: 100%;

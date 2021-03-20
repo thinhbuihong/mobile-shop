@@ -9,16 +9,18 @@ import {
   ProductPrice,
 } from "./style/productItem";
 
-interface Props {}
+interface Props {
+  product: any;
+}
 
-export const ProductItem = (props: Props) => {
+export const ProductItem = ({ product }: Props) => {
   return (
     <Container>
-      <ProductImage src="/images/feature-pic2.jpg" />
+      <ProductImage src={product.image} />
       <ProductInfo>
-        <ProductName>product1</ProductName>
+        <ProductName>{product.name}</ProductName>
         <PriceDetailt>
-          <ProductPrice>$4000</ProductPrice>
+          <ProductPrice>$ {product.price}</ProductPrice>
           <AddButton>Add to Cart</AddButton>
         </PriceDetailt>
       </ProductInfo>

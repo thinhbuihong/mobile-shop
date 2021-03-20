@@ -1,16 +1,17 @@
 import React from "react";
-import { Footer } from "./components/footer";
-import { Header } from "./components/header";
-import { Menu } from "./components/menu";
-import { Products } from "./components/products";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HomePage } from "./pages/home";
+import { ProductDetailPage } from "./pages/productDetail";
+import { ProductsPage } from "./pages/products";
 
 export const App = () => {
   return (
-    <div>
-      <Header />
-      <Menu />
-      <Products />
-      <Footer />
-    </div>
+    <>
+      <Router>
+        <Route path="/" exact component={HomePage}></Route>
+        <Route path="/products" component={ProductsPage} exact />
+        <Route path="/products/:id" component={ProductDetailPage} exact />
+      </Router>
+    </>
   );
 };
