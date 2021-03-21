@@ -1,13 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { App } from "./app";
+import { Provider } from "react-redux";
+import store from "./store";
 import { GlobalStyles } from "./globalstyle";
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <GlobalStyles></GlobalStyles>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById("root")
 );
 

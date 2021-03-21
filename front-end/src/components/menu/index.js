@@ -2,9 +2,7 @@ import React from "react";
 import { Container, MenuItem, MenuList, Searchbox } from "./style/menu";
 import { Link } from "react-router-dom";
 
-interface Props {}
-
-export const Menu = (props: Props) => {
+export const Menu = () => {
   return (
     <Container>
       <MenuList>

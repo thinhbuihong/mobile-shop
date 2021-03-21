@@ -7,9 +7,8 @@ import {
   Item,
 } from "./style/footer";
 
-interface Props {}
 
-export const Footer = (props: Props) => {
+export const Footer = () => {
   return (
     <Container>
       <FooterGroup>

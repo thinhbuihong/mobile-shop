@@ -20,6 +20,7 @@ export const MenuItem = styled.p`
   border-right: 3px solid black;
   font-weight: lighter;
   cursor: pointer;
+  background-color: #383838;
   transition: all 0.3s;
 
   & a {
@@ -30,7 +31,6 @@ export const MenuItem = styled.p`
   &:hover {
     transform: scale(1.1) rotate(-5deg);
     border: none;
-    background-color: #383838;
   }
 `;
 
