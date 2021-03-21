@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { ProductItem } from "../productItem";
-import { Container } from "./style/products";
 import { getProducts } from "../../actions/productAction";
 import { Loader } from "../loader";
 import { Message } from "../message";
+import { ProductItem } from "../productItem";
+import { Container } from "./style/products";
 
 export const Products = () => {
   const dispatch = useDispatch();

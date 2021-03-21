@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   AddButton,
   Container,
@@ -9,14 +10,12 @@ import {
   ProductPrice,
 } from "./style/productItem";
 
-interface Props {
-  product: any;
-}
-
-export const ProductItem = ({ product }: Props) => {
+export const ProductItem = ({ product }) => {
   return (
     <Container>
-      <ProductImage src={product.image} />
+      <Link to={'/products/' + product._id}>
+        <ProductImage src={product.image} />
+      </Link>
       <ProductInfo>
         <ProductName>{product.name}</ProductName>
         <PriceDetailt>
