@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
+import { addToCart } from '../../actions/cartActions';
 import { getProductDetail } from '../../actions/productAction';
 import { Loader } from '../loader';
 import { Message } from '../message';
@@ -17,7 +18,9 @@ export const ProductDetail = ({ match }) => {
 
 
   const addToCartHandler = () => {
-    history.push(`/cart/${match.params.id}`)
+    // history.push(`/cart/${match.params.id}`)
+    dispatch(addToCart(product))
+    history.push(`/cart/`)
   }
 
   return (
