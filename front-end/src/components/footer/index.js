@@ -1,16 +1,16 @@
 import React from "react";
 import {
-  Container,
   FooterGroup,
+  FooterWrapper,
   GroupHeader,
   GroupItems,
-  Item,
+  Item
 } from "./style/footer";
 
 
 export const Footer = () => {
   return (
-    <Container>
+    <FooterWrapper>
       <FooterGroup>
         <GroupHeader>information</GroupHeader>
         <GroupItems>
@@ -51,6 +51,6 @@ export const Footer = () => {
           <Item>+00-123-000000</Item>
         </GroupItems>
       </FooterGroup>
-    </Container>
+    </FooterWrapper>
   );
 };

@@ -1,6 +1,6 @@
 import styled from "styled-components/macro";
 
-export const Container = styled.div`
+export const MenuWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,7 +21,7 @@ export const MenuItem = styled.p`
   font-weight: lighter;
   cursor: pointer;
   background-color: #383838;
-  transition: all 0.3s;
+  transition: transform 0.3s;
 
   & a {
     color: white;

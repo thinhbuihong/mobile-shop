@@ -4,7 +4,7 @@ import { getProducts } from "../../actions/productAction";
 import { Loader } from "../loader";
 import { Message } from "../message";
 import { ProductItem } from "../productItem";
-import { Container } from "./style/products";
+import { ProductsWrapper } from "./style/products";
 
 export const Products = () => {
   const dispatch = useDispatch();
@@ -15,13 +15,13 @@ export const Products = () => {
   }, [dispatch]);
 
   return (
-    <Container>
+    <ProductsWrapper>
       {loading ? <Loader /> :
         error && < Message message={error} variant='info' />}
 
       {products?.map((product, i) => (
         <ProductItem key={i} product={product} />
       ))}
-    </Container>
+    </ProductsWrapper>
   );
 };

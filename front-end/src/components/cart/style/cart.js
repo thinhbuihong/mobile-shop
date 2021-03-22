@@ -1,24 +1,24 @@
 import styled from 'styled-components/macro';
 
-export const Cart__Container = styled.div`
+export const CartWrapper = styled.div`
   width:100%;
   text-transform:uppercase;
   font-size:2.3rem;
   margin-right:1rem;
 `;
-export const Cart__Header = styled.h2`
+export const CartHeader = styled.h2`
   
 `;
-export const Cart__Items = styled.table`
+export const CartItems = styled.table`
   width:100%;
 
 
 `;
-export const Cart__ItemsHeader = styled.tr`
+export const CartItemsHeader = styled.tr`
   font-size:1.6rem;
   text-align:left;
 `;
-export const Cart__Clear = styled.button`
+export const CartClearButton = styled.button`
   margin-left:auto;
   display:block;
   background-color:grey;

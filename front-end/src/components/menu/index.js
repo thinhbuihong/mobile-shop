@@ -1,10 +1,10 @@
 import React from "react";
-import { Container, MenuItem, MenuList, Searchbox } from "./style/menu";
 import { Link } from "react-router-dom";
+import { MenuItem, MenuList, MenuWrapper, Searchbox } from "./style/menu";
 
 export const Menu = () => {
   return (
-    <Container>
+    <MenuWrapper>
       <MenuList>
         <MenuItem>
           <Link to="/">home</Link>
@@ -21,6 +21,6 @@ export const Menu = () => {
       </MenuList>
 
       <Searchbox type="input" placeholder="Search" />
-    </Container>
+    </MenuWrapper>
   );
 };

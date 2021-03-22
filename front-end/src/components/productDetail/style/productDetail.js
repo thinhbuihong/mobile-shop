@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-export const Container = styled.div`
+export const ProductDetailWrapper = styled.div`
   display:flex;
   margin: 4rem 0;
   padding:3rem;

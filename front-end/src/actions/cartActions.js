@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { CART_ADD_ITEM, CART_CLEAR, CART_REMOVE_ITEM } from '../constants/cartConstants';
 
 export const addToCart = (product) => {

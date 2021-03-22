@@ -1,6 +1,6 @@
 import styled from "styled-components/macro";
 
-export const Container = styled.div`
+export const FooterWrapper = styled.div`
   border-top: 0.1rem solid gray;
   margin-bottom: 4rem;
   display: flex;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Checkout__Button, Checkout__Container, Checkout__Header, Checkout__Total } from './style/checkout'
+import { CheckoutButton, CheckoutWrapper, CheckoutHeader, CheckoutTotal } from './style/checkout'
 import { useSelector } from 'react-redux';
 
 export const Checkout = () => {
@@ -13,10 +13,10 @@ export const Checkout = () => {
 
   return (
     cartItems.length > 0 &&
-    (<Checkout__Container>
-      <Checkout__Header>Total ({cartItems.length}) items</Checkout__Header>
-      <Checkout__Total>{totalPrice.toFixed(2)} $</Checkout__Total>
-      <Checkout__Button>CHECKOUT</Checkout__Button>
-    </Checkout__Container>)
+    (<CheckoutWrapper>
+      <CheckoutHeader>Total ({cartItems.length}) items</CheckoutHeader>
+      <CheckoutTotal>{totalPrice.toFixed(2)} $</CheckoutTotal>
+      <CheckoutButton>CHECKOUT</CheckoutButton>
+    </CheckoutWrapper>)
   )
 }

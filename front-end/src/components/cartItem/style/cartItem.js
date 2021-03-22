@@ -1,22 +1,22 @@
 import styled from 'styled-components/macro';
 
-export const CartItem__Container = styled.tr`
+export const CartItemWrapper = styled.tr`
   font-size:1.6rem;
   
 `;
 
-export const CartItem__Image = styled.img`
+export const CartItemImage = styled.img`
   height:10rem;
 `;
 
-export const CartItem__Name = styled.h4`
+export const CartItemName = styled.h4`
 `;
-export const CartItem__Price = styled.p`
+export const CartItemPrice = styled.p`
   
 `;
-export const CartItem__Quantity = styled.p`
+export const CartItemQuantity = styled.p`
   
 `;
-export const CartItem__Remove = styled.span`
+export const CartItemRemove = styled.span`
   cursor:pointer;
 `;

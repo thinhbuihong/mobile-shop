@@ -2,17 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {
   AddButton,
-  Container,
   PriceDetailt,
   ProductImage,
   ProductInfo,
+  ProductItemWrapper,
   ProductName,
-  ProductPrice,
+  ProductPrice
 } from "./style/productItem";
 
 export const ProductItem = ({ product }) => {
   return (
-    <Container>
+    <ProductItemWrapper>
       <Link to={'/products/' + product._id}>
         <ProductImage src={product.image} />
       </Link>
@@ -23,6 +23,6 @@ export const ProductItem = ({ product }) => {
           <AddButton>Add to Cart</AddButton>
         </PriceDetailt>
       </ProductInfo>
-    </Container>
+    </ProductItemWrapper>
   );
 };

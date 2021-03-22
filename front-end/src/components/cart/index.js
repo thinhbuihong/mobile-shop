@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { clearCart } from '../../actions/cartActions'
 import { CartItem } from '../cartItem'
 import { Message } from '../message'
-import { Cart__Header, Cart__Items, Cart__Container, Cart__ItemsHeader, Cart__Clear } from './style/cart'
+import { CartHeader, CartItems, CartWrapper, CartItemsHeader, CartClearButton } from './style/cart'
 
 export const Cart = () => {
   const dispatch = useDispatch();
@@ -11,27 +11,27 @@ export const Cart = () => {
 
   return (
     cartItems.length > 0 ?
-      (<Cart__Container>
-        <Cart__Header>shopping cart</Cart__Header>
-        <Cart__Items>
-          <Cart__ItemsHeader>
+      (<CartWrapper>
+        <CartHeader>shopping cart</CartHeader>
+        <CartItems>
+          <CartItemsHeader>
             <th>#</th>
             <th>Image</th>
             <th>Name</th>
             <th>Price</th>
             <th>Quantity</th>
             <th></th>
-          </Cart__ItemsHeader>
+          </CartItemsHeader>
 
           {cartItems.map((item, i) => (
             <CartItem item={item} key={i} num={i + 1} />
           ))}
-        </Cart__Items>
+        </CartItems>
 
-        <Cart__Clear onClick={() => {
+        <CartClearButton onClick={() => {
           dispatch(clearCart())
-        }}>CLEAR</Cart__Clear>
-      </Cart__Container>)
+        }}>CLEAR</CartClearButton>
+      </CartWrapper>)
       : <Message message="Cart Empty" />
 
   )

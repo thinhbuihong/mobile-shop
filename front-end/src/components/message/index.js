@@ -6,7 +6,10 @@ export const Message = ({ message, variant = 'info' }) => {
       case 'info':
         return ['#37277D', '#ABF400'];
       case 'error':
-        return ['#B54F27', '#b59327']
+        return ['#B54F27', '#b59327'];
+
+      default:
+        return ['#37277D', '#ABF400'];
     }
   })(variant)
 

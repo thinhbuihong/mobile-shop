@@ -1,5 +1,5 @@
 import React from 'react'
-import { CartItem__Container, CartItem__Image, CartItem__Name, CartItem__Price, CartItem__Quantity, CartItem__Remove } from './style/cartItem'
+import { CartItemWrapper, CartItemImage, CartItemName, CartItemPrice, CartItemQuantity, CartItemRemove } from './style/cartItem'
 import { useDispatch } from 'react-redux'
 import { removeItemInCart } from '../../actions/cartActions';
 
@@ -10,13 +10,13 @@ export const CartItem = ({ item, num }) => {
   }
 
   return (
-    <CartItem__Container>
+    <CartItemWrapper>
       <td>{num}</td>
-      <td><CartItem__Image src={item.image} /></td>
-      <td><CartItem__Name>{item.name}</CartItem__Name></td>
-      <td><CartItem__Price>{item.price}</CartItem__Price></td>
-      <td><CartItem__Quantity>{item.quantity}</CartItem__Quantity></td>
-      <td><CartItem__Remove onClick={removeItem.bind(this, item.productId)}>✖</CartItem__Remove></td>
-    </CartItem__Container>
+      <td><CartItemImage src={item.image} /></td>
+      <td><CartItemName>{item.name}</CartItemName></td>
+      <td><CartItemPrice>{item.price}</CartItemPrice></td>
+      <td><CartItemQuantity>{item.quantity}</CartItemQuantity></td>
+      <td><CartItemRemove onClick={removeItem.bind(this, item.productId)}>✖</CartItemRemove></td>
+    </CartItemWrapper>
   )
 }
