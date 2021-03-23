@@ -11,10 +11,8 @@ export const CartHeader = styled.h2`
 `;
 export const CartItems = styled.table`
   width:100%;
-
-
 `;
-export const CartItemsHeader = styled.tr`
+export const CartItemsHeader = styled.thead`
   font-size:1.6rem;
   text-align:left;
 `;

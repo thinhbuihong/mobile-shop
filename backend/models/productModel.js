@@ -9,48 +9,48 @@ const reviewSchema = mongoose.Schema({
 const productSchema = mongoose.Schema({
   userId: {
     type: mongoose.Schema.Types.ObjectId,
-    require: true,
+    required: true,
     ref: 'User',
   },
   name: {
     type: String,
-    require: true,
+    required: true,
   },
   image: {
     type: String,
-    require: true,
+    required: true,
   },
   brand: {
     type: String,
-    require: true,
+    required: true,
   },
   category: {
     type: String,
-    require: true,
+    required: true,
   },
   description: {
     type: String,
-    require: true,
+    required: true,
   },
   reviews: [reviewSchema],
   ratting: {
     type: Number,
-    require: true,
+    required: true,
     default: 0,
   },
   numReviews: {
     type: Number,
-    require: true,
+    required: true,
     default: 0,
   },
   price: {
     type: Number,
-    require: true,
+    required: true,
     default: 0,
   },
   countInStock: {
     type: Number,
-    require: true,
+    required: true,
     default: 0,
   }
 }, {

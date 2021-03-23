@@ -1,9 +1,9 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { clearCart } from '../../actions/cartActions'
 import { CartItem } from '../cartItem'
 import { Message } from '../message'
-import { CartHeader, CartItems, CartWrapper, CartItemsHeader, CartClearButton } from './style/cart'
+import { CartClearButton, CartHeader, CartItems, CartItemsHeader, CartWrapper } from './style/cart'
 
 export const Cart = () => {
   const dispatch = useDispatch();
@@ -15,17 +15,21 @@ export const Cart = () => {
         <CartHeader>shopping cart</CartHeader>
         <CartItems>
           <CartItemsHeader>
-            <th>#</th>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th></th>
+            <tr>
+              <th>#</th>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th></th>
+            </tr>
           </CartItemsHeader>
 
-          {cartItems.map((item, i) => (
-            <CartItem item={item} key={i} num={i + 1} />
-          ))}
+          <tbody>
+            {cartItems.map((item, i) => (
+              <CartItem item={item} key={i} num={i + 1} />
+            ))}
+          </tbody>
         </CartItems>
 
         <CartClearButton onClick={() => {
