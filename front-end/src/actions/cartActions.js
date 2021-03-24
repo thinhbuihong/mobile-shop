@@ -1,4 +1,4 @@
-import { CART_ADD_ITEM, CART_CLEAR, CART_REMOVE_ITEM } from '../constants/cartConstants';
+import { CART_ADD_ITEM, CART_CLEAR, CART_REMOVE_ITEM, CART_SAVE_SHIPPING_ADDRESS } from '../constants/cartConstants';
 
 export const addToCart = (product) => {
   return ({
@@ -11,6 +11,13 @@ export const addToCart = (product) => {
       countInStock: product.countInStock,
     }
   })
+}
+
+export const saveShippingAddress = (data) => (dispatch) => {
+  dispatch({
+    type: CART_SAVE_SHIPPING_ADDRESS,
+    payload: data,
+  });
 }
 
 export const clearCart = () => {

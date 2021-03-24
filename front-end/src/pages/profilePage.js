@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getUserDetails, updateUserProfile } from '../actions/userActions';
+import { updateUserProfile } from '../actions/userActions';
 import { Footer } from '../components/footer';
 import Form from '../components/form';
 import { Header } from '../components/header';
@@ -11,7 +11,7 @@ import { Message } from '../components/message';
 const ProfilePage = ({ history }) => {
   const dispatch = useDispatch();
   const { userInfo } = useSelector(state => state.userLogin);
-  const { loading, error, userInfo: user, success } = useSelector(state => state.userUpdateProfile);
+  const { loading, error, success } = useSelector(state => state.userUpdateProfile);
 
   const [form, setForm] = useState({
     name: '',
@@ -33,7 +33,7 @@ const ProfilePage = ({ history }) => {
       })
 
     }
-  }, [userInfo])
+  }, [userInfo, form, history])
 
   const FormChangeHandler = (e) => {
     setForm({

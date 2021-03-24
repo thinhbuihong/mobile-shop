@@ -22,7 +22,7 @@ const RegisterPage = ({ location, history }) => {
   });
   const [message, setMessage] = useState(null);
 
-  const FormChangeHandler = (e) => {
+  const formChangeHandler = (e) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value,
@@ -66,22 +66,22 @@ const RegisterPage = ({ location, history }) => {
         <Form.Base>
           <Form.Group>
             <Form.Label htmlFor="name">Name</Form.Label>
-            <Form.Input name="name" value={form.name} onChange={FormChangeHandler} />
+            <Form.Input name="name" value={form.name} onChange={formChangeHandler} />
           </Form.Group>
 
           <Form.Group>
             <Form.Label htmlFor="email">Email</Form.Label>
-            <Form.Input name="email" type="email" value={form.email} onChange={FormChangeHandler} />
+            <Form.Input name="email" type="email" value={form.email} onChange={formChangeHandler} />
           </Form.Group>
 
           <Form.Group>
             <Form.Label htmlFor="password">Password</Form.Label>
-            <Form.Input name="password" type="password" value={form.password} onChange={FormChangeHandler} />
+            <Form.Input name="password" type="password" value={form.password} onChange={formChangeHandler} />
           </Form.Group>
 
           <Form.Group>
             <Form.Label htmlFor="confirmPassword">Confirm Password</Form.Label>
-            <Form.Input name="confirmPassword" type="password" value={form.confirmPassword} onChange={FormChangeHandler} />
+            <Form.Input name="confirmPassword" type="password" value={form.confirmPassword} onChange={formChangeHandler} />
           </Form.Group>
 
           <Form.Submit disable={loading}>Register</Form.Submit>
