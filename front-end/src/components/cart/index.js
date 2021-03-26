@@ -5,13 +5,13 @@ import { CartItem } from '../cartItem'
 import { Message } from '../message'
 import { CartClearButton, CartHeader, CartItems, CartItemsHeader, CartWrapper } from './style/cart'
 
-export const Cart = () => {
+export const Cart = (...restProps) => {
   const dispatch = useDispatch();
   const { cartItems } = useSelector(state => state.cart);
 
   return (
     cartItems.length > 0 ?
-      (<CartWrapper>
+      (<CartWrapper {...restProps}>
         <CartHeader>shopping cart</CartHeader>
         <CartItems>
           <CartItemsHeader>
