@@ -27,3 +27,12 @@ export const addOrder = asyncHandler(async (req, res) => {
   const createdOrder = await order.save();
   res.status(201).json(createdOrder);
 })
+
+//@desk   get order by user id
+//@route  Get /api/orders/
+//@access private
+export const getOrders = asyncHandler(async (req, res) => {
+  const orders = await Order.find({ userId: req.user._id });
+
+  res.json(orders);
+});

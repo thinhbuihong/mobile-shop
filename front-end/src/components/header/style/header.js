@@ -11,5 +11,17 @@ export const HeaderWrapper = styled.div`
 export const Logo = styled.img``;
 
 export const Info = styled.div`
+  display:flex;
   font-size: 1.6rem;
+
+  &>a{
+    color:black;
+    font-weight:bold;
+    text-decoration:none;
+    margin-right: 2rem;
+    transition:all .3s;
+    &:hover{
+      transform: translateY(-.3rem);
+    }
+  }
 `;

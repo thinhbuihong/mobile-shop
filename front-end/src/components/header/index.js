@@ -1,29 +1,23 @@
 import React from "react";
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
-import { logout } from "../../actions/userActions";
+import { UserInfo } from "../userInfo";
 import { HeaderWrapper, Info, Logo } from "./style/header";
 
 export const Header = () => {
-  const dispatch = useDispatch();
   const { userInfo } = useSelector(state => state.userLogin);
+  const { cartItems } = useSelector(state => state.cart);
 
-  const logoutHandler = (e) => {
-    dispatch(logout());
-  }
   return (
     <HeaderWrapper>
       <Logo src="/images/logo.png" />
       <Info>
+        <Link to="/cart">CART ({cartItems.length})</Link>
         {userInfo ? (
-          <div>
-            <Link to='/profile'>{userInfo.name}</Link>
-            <button onClick={logoutHandler}>logout</button>
-          </div>
+          <UserInfo userName={userInfo.name} />
         ) : (
           <Link to="/login">Login</Link>
         )}
-        <Link to="/cart">CART</Link>
       </Info>
     </HeaderWrapper>
   );
