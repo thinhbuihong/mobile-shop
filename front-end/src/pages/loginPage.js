@@ -11,6 +11,7 @@ import { Message } from '../components/message';
 
 const LoginPage = ({ location, history }) => {
   const dispatch = useDispatch();
+  //to do usequery
   const redirect = location.search?.split('=')[1] || '/';
   const { loading, error, userInfo } = useSelector(state => state.userLogin);
 
@@ -59,7 +60,7 @@ const LoginPage = ({ location, history }) => {
           <Form.Submit disable={loading}>Login</Form.Submit>
         </Form.Base>
 
-        <div>
+        <div style={{ fontSize: "1.3rem" }}>
           New customer? <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>
             Register
           </Link>

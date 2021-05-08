@@ -7,6 +7,7 @@ import { Header } from '../components/header';
 import { Loader } from '../components/loader';
 import { Menu } from '../components/menu';
 import { Message } from '../components/message';
+import { USER_UPDATE_PROFILE_CLEAR } from '../constants/userConstants';
 
 const ProfilePage = ({ history }) => {
   const dispatch = useDispatch();
@@ -34,6 +35,12 @@ const ProfilePage = ({ history }) => {
 
     }
   }, [userInfo, form, history])
+
+  useEffect(() => {
+    return () => {
+      dispatch({ type: USER_UPDATE_PROFILE_CLEAR })
+    }
+  }, [dispatch])
 
   const FormChangeHandler = (e) => {
     setForm({
