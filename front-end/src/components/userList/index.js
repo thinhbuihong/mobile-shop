@@ -16,7 +16,8 @@ function UserList() {
     } else {
       history.push('/');
     }
-  }, [dispatch, history, userInfo])
+    // eslint-disable-next-line
+  }, [])
 
   return (
     <UserListWrapper>
