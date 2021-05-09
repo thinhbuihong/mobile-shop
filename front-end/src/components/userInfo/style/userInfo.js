@@ -26,7 +26,6 @@ export const UserInfoDropdown = styled.ul`
     font-weight:bold;
     cursor:pointer;
     background-color: black;
-    ${'' /* width:100%; */}
     color:white;
     & a{
       color:white;

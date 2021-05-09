@@ -34,7 +34,8 @@ const ProfilePage = ({ history }) => {
       })
 
     }
-  }, [userInfo, form, history])
+    // eslint-disable-next-line
+  }, [])
 
   useEffect(() => {
     return () => {
