@@ -14,7 +14,7 @@ export const Header = () => {
       <Info>
         <Link to="/cart">CART ({cartItems.length})</Link>
         {userInfo ? (
-          <UserInfo userName={userInfo.name} />
+          <UserInfo userInfo={userInfo} />
         ) : (
           <Link to="/login">Login</Link>
         )}

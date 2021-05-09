@@ -4,17 +4,20 @@ import { Link } from 'react-router-dom'
 import { logout } from '../../actions/userActions'
 import { UserInfoDropdown, UserInfoWrapper, UserName } from './style/userInfo'
 
-export const UserInfo = ({ userName }) => {
+export const UserInfo = ({ userInfo }) => {
   const dispatch = useDispatch();
   const [show, setShow] = useReducer(state => !state, false);
 
   return (
     <UserInfoWrapper>
-      <UserName onClick={setShow}>👤 {userName}</UserName>
+      <UserName onClick={setShow}>👤 {userInfo.name}</UserName>
 
       {
         show &&
         <UserInfoDropdown>
+          {userInfo.isAdmin && <>
+            <li><Link to="/admin/users">Users List</Link></li>
+          </>}
           <li><Link to="/profile">Profile</Link></li>
           <li onClick={() => dispatch(logout())}>Logout</li>
         </UserInfoDropdown>

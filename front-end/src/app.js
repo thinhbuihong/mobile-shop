@@ -9,6 +9,7 @@ import ProfilePage from './pages/profilePage';
 import RegisterPage from "./pages/registerPage";
 import ShippingPage from "./pages/shippingPage";
 import PlaceOrderPage from './pages/placeOrderPage';
+import UsersListPage from './pages/userList';
 
 export const App = () => {
   return (
@@ -23,6 +24,7 @@ export const App = () => {
         <Route path="/profile" component={ProfilePage} />
         <Route path="/shipping" component={ShippingPage} />
         <Route path="/placeorder" component={PlaceOrderPage} />
+        <Route path="/admin/users" component={UsersListPage} />
       </Router>
     </>
   );
