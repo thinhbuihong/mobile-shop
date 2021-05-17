@@ -18,6 +18,7 @@ export const UserInfo = ({ userInfo }) => {
         <UserInfoDropdown>
           {userInfo.isAdmin && <>
             <li><Link to="/admin/users">Users List</Link></li>
+            <li><Link to="/admin/products">Product List</Link></li>
           </>}
           <li><Link to="/profile">Profile</Link></li>
           <li onClick={() => {

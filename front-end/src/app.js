@@ -10,6 +10,7 @@ import RegisterPage from "./pages/registerPage";
 import ShippingPage from "./pages/shippingPage";
 import PlaceOrderPage from './pages/placeOrderPage';
 import UsersListPage from './pages/userList';
+import ProductListPage from './pages/productListPage';
 
 export const App = () => {
   return (
@@ -25,6 +26,7 @@ export const App = () => {
         <Route path="/shipping" component={ShippingPage} />
         <Route path="/placeorder" component={PlaceOrderPage} />
         <Route path="/admin/users" component={UsersListPage} />
+        <Route path="/admin/products" component={ProductListPage} />
       </Router>
     </>
   );
